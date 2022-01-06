@@ -28,7 +28,7 @@
         <h1 id="clock" class="hidden">00:00:00</h1>
         <h1 id="greeting" class="hidden"></h1>
         <form id="todo-form" class="hidden">
-          <h3>What is your main focus for today?</h3>
+          <h3>What is your main focus today?</h3>
           <input type="text" required />
         </form>
         <ul id="todo-list"></ul>
@@ -38,9 +38,8 @@
         <span class="hidden"></span>
       </div>
     </div>
-    <!-- js파일 export 해서 모듈로 사용하고 싶으면 모듈로 타입 지정해줘야함 -->
-    <!-- 이렇게 해서 export import하고 로컬에서 돌리면 에러뜨므로 서버에서 돌려야함 -->
-    <script src="js/greeting.js"></script>
+
+    <script type="module" src="js/greeting.js"></script>
     <script type="module" src="js/clock.js"></script>
     <script type="module" src="js/quotes.js"></script>
     <script src="js/background.js"></script>

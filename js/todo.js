@@ -53,4 +53,4 @@ if (savedToDos !== null) {
   parsedToDos.forEach(paintTodo);
 }
 
-export { toDoForm, toDoList };
+export { toDoForm, toDoInput, toDoList };
