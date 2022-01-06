@@ -1,6 +1,6 @@
 import { clock } from "./clock.js";
 import { quote, author } from "./quotes.js";
-import { toDoForm, toDoInput, toDoList } from "./todo.js";
+import { toDoForm, toDoList } from "./todo.js";
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
@@ -19,12 +19,16 @@ function onLoginSubmit(event) {
 
 function paintOthers(username) {
   greeting.innerText = `Hello, ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
-  clock.classList.remove(HIDDEN_CLASSNAME);
-  quote.classList.remove(HIDDEN_CLASSNAME);
-  author.classList.remove(HIDDEN_CLASSNAME);
-  toDoForm.classList.remove(HIDDEN_CLASSNAME);
-  toDoList.classList.remove(HIDDEN_CLASSNAME);
+  let others = [greeting, clock, quote, author, toDoForm, toDoList];
+  for (let i = 0; i < others.length; i++) {
+    others[i].classList.remove(HIDDEN_CLASSNAME);
+  }
+  //   greeting.classList.remove(HIDDEN_CLASSNAME);
+  //   clock.classList.remove(HIDDEN_CLASSNAME);
+  //   quote.classList.remove(HIDDEN_CLASSNAME);
+  //   author.classList.remove(HIDDEN_CLASSNAME);
+  //   toDoForm.classList.remove(HIDDEN_CLASSNAME);
+  //   toDoList.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
